@@ -7,8 +7,8 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# Konfiguracja bazy danych PostgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://staz:haslo@localhost:5432/compose_test_db'
+# Konfiguracja bazy danych PostgreSQL - ustaw user, pass, db
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://user:pass@localhost:5432/db_name'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
