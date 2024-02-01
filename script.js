@@ -1,9 +1,15 @@
+function getHostIP() {
+    return window.location.hostname;
+}
+
 function sendMessage() {
     const messageInput = document.getElementById('messageInput');
     const content = messageInput.value;
 
     if (content.trim() !== '') {
-        fetch('http://localhost:5000/api/messages', {
+        const apiUrl = `http://${getHostIP()}:5000/api/messages`;
+
+        fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -23,8 +29,9 @@ function sendMessage() {
 
 function getMessages() {
     const messageTableBody = document.getElementById('messageTableBody');
+    const apiUrl = `http://${getHostIP()}:5000/api/messages`;
 
-    fetch('http://localhost:5000/api/messages', {
+    fetch(apiUrl, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
