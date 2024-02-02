@@ -7,7 +7,7 @@ function sendMessage() {
     const content = messageInput.value;
 
     if (content.trim() !== '') {
-        const apiUrl = `http://${getHostIP()}:5000/api/messages`;
+        const apiUrl = `http://${getHostIP()}:8888/api/messages`;
 
         fetch(apiUrl, {
             method: 'POST',
@@ -29,7 +29,7 @@ function sendMessage() {
 
 function getMessages() {
     const messageTableBody = document.getElementById('messageTableBody');
-    const apiUrl = `http://${getHostIP()}:5000/api/messages`;
+    const apiUrl = `http://${getHostIP()}:8888/api/messages`;
 
     fetch(apiUrl, {
         method: 'GET',
