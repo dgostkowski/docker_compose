@@ -4,9 +4,10 @@
 1. Verify the Python version; any version from 3.x should be suitable.
 2. Run a Python virtual environment (venv) – optional but recommended.
 3. Install the required pip packages listed in requirements.txt.
-4. Create a user and a PostgreSQL database with names specified in the app.py file (check the `SQLALCHEMY_DATABASE_URI` variable). You can modify default values, but ensure you update them in the app.py file.
-5. Grant the newly created user privileges to the database.
-6. Run the backend using the command 'python (path to file)app.py'. (Note: Please replace `(path to file)` in the commands with the actual path to the file.) You should see similar output:
+4. Install PostgreSQL 14 server.
+5. Create a user and a PostgreSQL database with names specified in the app.py file (check the `SQLALCHEMY_DATABASE_URI` variable). You can modify default values, but ensure you update them in the app.py file.
+6. Grant the newly created user privileges to the database.
+7. Run the backend using the command 'python (path to file)app.py'. (Note: Please replace `(path to file)` in the commands with the actual path to the file.) You should see similar output:
 
 ```
  * Serving Flask app 'app'
