@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Konfiguracja bazy danych PostgreSQL, może byc konieczna zmiana
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://staz:haslo@localhost:5432/compose_test_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://staz:haslo@172.20.0.2:5432/compose_test_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
